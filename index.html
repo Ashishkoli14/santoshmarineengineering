@@ -242,13 +242,55 @@
     .flogo{width:56px;height:56px;border-radius:50%;overflow:hidden;background:var(--white);padding:3px;flex-shrink:0}
     .flogo img{width:100%;height:100%;object-fit:contain}
 
+    /* OUR VESSELS */
+    #vessels{background:var(--off-white)}
+    .vsl-hdr{text-align:center;margin-bottom:64px}
+    .vsl-list{display:flex;flex-direction:column;gap:0}
+    .vsl-card{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:0;border-radius:var(--rl);overflow:hidden;box-shadow:var(--shl);margin-bottom:40px;background:var(--white)}
+    .vsl-card.reverse{direction:rtl}
+    .vsl-card.reverse > *{direction:ltr}
+    .vsl-img{width:100%;height:380px;overflow:hidden;position:relative}
+    .vsl-img img{width:100%;height:100%;object-fit:cover;transition:var(--t)}
+    .vsl-card:hover .vsl-img img{transform:scale(1.04)}
+    .vsl-body{padding:48px 44px;background:var(--white)}
+    .vsl-card.reverse .vsl-body{background:var(--navy);border-left:none}
+    .vsl-num{font-family:var(--fd);font-size:3.5rem;font-weight:700;color:rgba(200,146,42,.15);line-height:1;margin-bottom:4px}
+    .vsl-name{font-family:var(--fd);font-size:2rem;font-weight:600;color:var(--navy);margin-bottom:16px;line-height:1.1}
+    .vsl-card.reverse .vsl-name{color:var(--white)}
+    .vsl-desc{font-size:.93rem;color:var(--gray-600);line-height:1.85;margin-bottom:24px}
+    .vsl-card.reverse .vsl-desc{color:rgba(255,255,255,.6)}
+    .vsl-tags{display:flex;flex-wrap:wrap;gap:10px}
+    .vsl-tag{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:600;color:var(--navy);background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.25);border-radius:100px;padding:6px 14px}
+    .vsl-card.reverse .vsl-tag{color:var(--gold-light);background:rgba(200,146,42,.12);border-color:rgba(200,146,42,.3)}
+    .vsl-tag::before{content:"✓";color:var(--gold);font-size:.8rem;font-weight:700}
+
+    /* SERVICE CARD IMAGE */
+    .sc-img{width:100%;height:140px;overflow:hidden;border-radius:var(--r);margin-bottom:16px;position:relative}
+    .sc-img img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:var(--t)}
+    .sc:hover .sc-img img{opacity:.95;transform:scale(1.04)}
+    .sc-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,22,42,.7) 100%)}
+
     @media(max-width:1024px){.svgr{grid-template-columns:repeat(2,1fr)}.fgr{grid-template-columns:1fr 1fr}}
     @media(max-width:768px){
       section{padding:72px 5%}
       .nlinks{display:none}.hbg{display:flex}
-      .hh1{font-size:2.8rem}
+      /* FIX MOBILE HERO */
+      #hero{align-items:flex-start}
+      .hcont{padding:100px 5% 200px;width:100%}
+      .hbadge{flex-wrap:wrap;font-size:.65rem}
+      .hbadge span{font-size:.65rem;letter-spacing:.1em}
+      .hh1{font-size:clamp(2.4rem,10vw,3.5rem);line-height:1}
+      .hsub{font-size:clamp(1.2rem,5vw,1.8rem);margin-top:8px}
+      .hdesc{font-size:.9rem;max-width:100%}
       .hstats{grid-template-columns:repeat(2,1fr);position:relative;margin-top:48px}
-      .hcont{padding-bottom:40px}
+      .hs{padding:16px 12px}
+      .hsn{font-size:1.8rem}
+      /* VESSELS MOBILE */
+      .vsl-card,.vsl-card.reverse{grid-template-columns:1fr;direction:ltr}
+      .vsl-img{height:240px}
+      .vsl-body{padding:28px 24px}
+      .vsl-name{font-size:1.5rem}
+      /* REST */
       .ag,.wyg,.ctg,.pug{grid-template-columns:1fr}
       .abg{position:static;margin-top:16px;display:inline-block}
       .wyfc{left:12px}
@@ -258,8 +300,12 @@
       .fbot{flex-direction:column;text-align:center}
       .frow{grid-template-columns:1fr}
       .vgr{grid-template-columns:1fr 1fr}
+      .sc-img{height:110px}
     }
-    @media(max-width:480px){.hacts{flex-direction:column}.btng,.btno{justify-content:center}}
+    @media(max-width:480px){
+      .hacts{flex-direction:column}.btng,.btno{justify-content:center}
+      .hcont{padding:90px 5% 180px}
+    }
   </style>
 </head>
 <body>
@@ -276,6 +322,7 @@
   <ul class="nlinks">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#vessels">Our Vessels</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#contact" class="ncta">Contact Us</a></li>
@@ -285,6 +332,7 @@
 <div class="mmenu" id="mmenu">
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#vessels" onclick="toggleMenu()">Our Vessels</a>
   <a href="#why" onclick="toggleMenu()">Why Us</a>
   <a href="#expertise" onclick="toggleMenu()">Expertise</a>
   <a href="#contact" onclick="toggleMenu()">Contact Us</a>
@@ -354,19 +402,83 @@
       <p class="sdc c lt">End-to-end maritime advisory across the full value chain &mdash; from newbuilding to decommissioning, acquisition to restructuring.</p>
     </div>
     <div class="svgr">
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">01</div><div class="sci">&#x1F6A2;</div><div class="scnm">Shipbuilding Advisory Services</div><div class="sctg">End-to-end advisory for newbuilding projects across commercial &amp; specialized vessel segments</div><ul class="scul"><li>Newbuilding feasibility studies &amp; technical due diligence</li><li>Shipyard selection &amp; contract negotiation support</li><li>Specification development &amp; design review</li><li>Construction supervision &amp; milestone inspections</li><li>Cost control, progress monitoring &amp; risk management</li><li>Delivery acceptance &amp; commissioning support</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">02</div><div class="sci">&#x1F527;</div><div class="scnm">Ship Repair &amp; Conversion Consulting</div><div class="sctg">Planning, executing &amp; optimizing repair, retrofit and conversion projects</div><ul class="scul"><li>Repair scope definition &amp; budgeting</li><li>Dry dock planning &amp; shipyard negotiations</li><li>Retrofit &amp; conversion feasibility (green upgrades)</li><li>Supervision of repair &amp; conversion works</li><li>Quality assurance, timeline control &amp; claims support</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">03</div><div class="sci">&#x1F4E6;</div><div class="scnm">Procurement &amp; Supply Chain Management</div><div class="sctg">Cost optimization, reliability and compliance across maritime procurement</div><ul class="scul"><li>Strategic sourcing &amp; vendor evaluation</li><li>Contract negotiation &amp; supplier management</li><li>Inventory optimization &amp; logistics coordination</li><li>Spare parts planning &amp; lifecycle cost analysis</li><li>Supply chain risk assessment &amp; mitigation</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">04</div><div class="sci">&#x2696;&#xFE0F;</div><div class="scnm">Regulatory Approvals &amp; Compliance</div><div class="sctg">Guiding maritime clients through complex regulatory frameworks across jurisdictions</div><ul class="scul"><li>Local &amp; international compliance advisory</li><li>Environmental &amp; emissions compliance</li><li>Certification planning &amp; audit readiness</li><li>Liaison with regulators, class societies &amp; authorities</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">05</div><div class="sci">&#x2693;</div><div class="scnm">Vessel Sale &amp; Purchase Advisory</div><div class="sctg">Independent advisory for vessel acquisitions and divestments</div><ul class="scul"><li>Market analysis &amp; asset valuation</li><li>Pre-purchase inspections &amp; technical due diligence</li><li>Commercial &amp; legal transaction support</li><li>Negotiation advisory &amp; closing assistance</li><li>Post-acquisition integration &amp; handover support</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">06</div><div class="sci">&#x1F465;</div><div class="scnm">Manpower Sourcing</div><div class="sctg">Building compliant, competent and cost-effective maritime human capital</div><ul class="scul"><li>Seafarer &amp; shore-based manpower sourcing</li><li>Recruitment process design &amp; evaluation</li><li>Crew planning &amp; workforce optimization</li><li>HR policy advisory for maritime organizations</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">07</div><div class="sci">&#x1F393;</div><div class="scnm">Training &amp; Certification Services</div><div class="sctg">Enhancing workforce capability and compliance across maritime operations</div><ul class="scul"><li>Technical &amp; operational training programs</li><li>Leadership &amp; management development</li><li>Certification planning &amp; audit preparation</li><li>Customized modules aligned to regulatory requirements</li><li>Coordination with accredited training institutions</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">08</div><div class="sci">&#x1F91D;</div><div class="scnm">M&amp;A Advisory</div><div class="sctg">Maritime-focused M&amp;A supporting strategic growth, consolidation &amp; investment</div><ul class="scul"><li>Strategic assessment &amp; target identification</li><li>Technical, operational &amp; commercial due diligence</li><li>Valuation support &amp; deal structuring</li><li>Transaction advisory &amp; stakeholder coordination</li><li>Post-merger integration planning</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">09</div><div class="sci">&#x1F4C8;</div><div class="scnm">Restructuring &amp; Turnaround Advisory</div><div class="sctg">Assisting maritime businesses facing financial, operational or strategic challenges</div><ul class="scul"><li>Business diagnostics &amp; performance reviews</li><li>Cost restructuring &amp; operational optimization</li><li>Debt restructuring &amp; stakeholder negotiations</li><li>Fleet rationalization strategies</li><li>Turnaround execution support</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">10</div><div class="sci">&#x1F3D7;&#xFE0F;</div><div class="scnm">Infrastructure Management &amp; Advisory</div><div class="sctg">Advisory for shipyards, ports, terminals &amp; offshore facilities</div><ul class="scul"><li>Infrastructure feasibility &amp; master planning</li><li>Asset lifecycle management strategies</li><li>Operational efficiency &amp; capacity optimization</li><li>Maintenance planning &amp; CAPEX prioritization</li><li>Regulatory &amp; environmental compliance advisory</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">11</div><div class="sci">&#x1F4CB;</div><div class="scnm">Project Management Services</div><div class="sctg">Structured project management for complex maritime initiatives</div><ul class="scul"><li>End-to-end project planning &amp; execution</li><li>Schedule, cost &amp; risk management</li><li>Contractor coordination &amp; performance monitoring</li><li>Progress reporting &amp; governance support</li><li>Project close-out &amp; lessons-learned reviews</li></ul></div>
-      <div class="sc reveal"><div class="sctop"></div><div class="scn">12</div><div class="sci">&#x1F310;</div><div class="scnm">General Maritime Consulting</div><div class="sctg">Strategic, operational &amp; technical challenges across the maritime sector</div><ul class="scul"><li>Strategic planning &amp; market entry advisory</li><li>Operational efficiency &amp; cost optimization</li><li>Digital transformation &amp; process improvement</li><li>Sustainability &amp; ESG advisory</li><li>Independent expert opinions &amp; technical assessments</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&q=75" alt="Shipbuilding" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">01</div><div class="sci">&#x1F6A2;</div><div class="scnm">Shipbuilding Advisory Services</div><div class="sctg">End-to-end advisory for newbuilding projects across commercial &amp; specialized vessel segments</div><ul class="scul"><li>Newbuilding feasibility studies &amp; technical due diligence</li><li>Shipyard selection &amp; contract negotiation support</li><li>Specification development &amp; design review</li><li>Construction supervision &amp; milestone inspections</li><li>Cost control, progress monitoring &amp; risk management</li><li>Delivery acceptance &amp; commissioning support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/repair.jpg" alt="Ship Repair" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">02</div><div class="sci">&#x1F527;</div><div class="scnm">Ship Repair &amp; Conversion Consulting</div><div class="sctg">Planning, executing &amp; optimizing repair, retrofit and conversion projects</div><ul class="scul"><li>Repair scope definition &amp; budgeting</li><li>Dry dock planning &amp; shipyard negotiations</li><li>Retrofit &amp; conversion feasibility (green upgrades)</li><li>Supervision of repair &amp; conversion works</li><li>Quality assurance, timeline control &amp; claims support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=600&q=75" alt="Procurement" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">03</div><div class="sci">&#x1F4E6;</div><div class="scnm">Procurement &amp; Supply Chain Management</div><div class="sctg">Cost optimization, reliability and compliance across maritime procurement</div><ul class="scul"><li>Strategic sourcing &amp; vendor evaluation</li><li>Contract negotiation &amp; supplier management</li><li>Inventory optimization &amp; logistics coordination</li><li>Spare parts planning &amp; lifecycle cost analysis</li><li>Supply chain risk assessment &amp; mitigation</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/compliance.jpg" alt="Regulatory Compliance" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">04</div><div class="sci">&#x2696;&#xFE0F;</div><div class="scnm">Regulatory Approvals &amp; Compliance</div><div class="sctg">Guiding maritime clients through complex regulatory frameworks across jurisdictions</div><ul class="scul"><li>Local &amp; international compliance advisory</li><li>Environmental &amp; emissions compliance</li><li>Certification planning &amp; audit readiness</li><li>Liaison with regulators, class societies &amp; authorities</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/sales.png" alt="Vessel Sale Purchase" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">05</div><div class="sci">&#x2693;</div><div class="scnm">Vessel Sale &amp; Purchase Advisory</div><div class="sctg">Independent advisory for vessel acquisitions and divestments</div><ul class="scul"><li>Market analysis &amp; asset valuation</li><li>Pre-purchase inspections &amp; technical due diligence</li><li>Commercial &amp; legal transaction support</li><li>Negotiation advisory &amp; closing assistance</li><li>Post-acquisition integration &amp; handover support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/Manpower.png" alt="Manpower Sourcing" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">06</div><div class="sci">&#x1F465;</div><div class="scnm">Manpower Sourcing</div><div class="sctg">Building compliant, competent and cost-effective maritime human capital</div><ul class="scul"><li>Seafarer &amp; shore-based manpower sourcing</li><li>Recruitment process design &amp; evaluation</li><li>Crew planning &amp; workforce optimization</li><li>HR policy advisory for maritime organizations</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=75" alt="Training Certification" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">07</div><div class="sci">&#x1F393;</div><div class="scnm">Training &amp; Certification Services</div><div class="sctg">Enhancing workforce capability and compliance across maritime operations</div><ul class="scul"><li>Technical &amp; operational training programs</li><li>Leadership &amp; management development</li><li>Certification planning &amp; audit preparation</li><li>Customized modules aligned to regulatory requirements</li><li>Coordination with accredited training institutions</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=75" alt="MA Advisory" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">08</div><div class="sci">&#x1F91D;</div><div class="scnm">M&amp;A Advisory</div><div class="sctg">Maritime-focused M&amp;A supporting strategic growth, consolidation &amp; investment</div><ul class="scul"><li>Strategic assessment &amp; target identification</li><li>Technical, operational &amp; commercial due diligence</li><li>Valuation support &amp; deal structuring</li><li>Transaction advisory &amp; stakeholder coordination</li><li>Post-merger integration planning</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/restructuring.png" alt="Restructuring" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">09</div><div class="sci">&#x1F4C8;</div><div class="scnm">Restructuring &amp; Turnaround Advisory</div><div class="sctg">Assisting maritime businesses facing financial, operational or strategic challenges</div><ul class="scul"><li>Business diagnostics &amp; performance reviews</li><li>Cost restructuring &amp; operational optimization</li><li>Debt restructuring &amp; stakeholder negotiations</li><li>Fleet rationalization strategies</li><li>Turnaround execution support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="images/infrastructure.png" alt="Infrastructure" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">10</div><div class="sci">&#x1F3D7;&#xFE0F;</div><div class="scnm">Infrastructure Management &amp; Advisory</div><div class="sctg">Advisory for shipyards, ports, terminals &amp; offshore facilities</div><ul class="scul"><li>Infrastructure feasibility &amp; master planning</li><li>Asset lifecycle management strategies</li><li>Operational efficiency &amp; capacity optimization</li><li>Maintenance planning &amp; CAPEX prioritization</li><li>Regulatory &amp; environmental compliance advisory</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=75" alt="Project Management" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">11</div><div class="sci">&#x1F4CB;</div><div class="scnm">Project Management Services</div><div class="sctg">Structured project management for complex maritime initiatives</div><ul class="scul"><li>End-to-end project planning &amp; execution</li><li>Schedule, cost &amp; risk management</li><li>Contractor coordination &amp; performance monitoring</li><li>Progress reporting &amp; governance support</li><li>Project close-out &amp; lessons-learned reviews</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="sc-img"><img src="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=600&q=75" alt="General Consulting" loading="lazy"/><div class="sc-img-overlay"></div></div><div class="scn">12</div><div class="sci">&#x1F310;</div><div class="scnm">General Maritime Consulting</div><div class="sctg">Strategic, operational &amp; technical challenges across the maritime sector</div><ul class="scul"><li>Strategic planning &amp; market entry advisory</li><li>Operational efficiency &amp; cost optimization</li><li>Digital transformation &amp; process improvement</li><li>Sustainability &amp; ESG advisory</li><li>Independent expert opinions &amp; technical assessments</li></ul></div>
     </div>
+  </div>
+</section>
+
+<!-- OUR VESSELS -->
+<section id="vessels">
+  <div class="container">
+    <div class="vsl-hdr reveal">
+      <span class="slb">Our Vessels</span>
+      <h2 class="stt">Vessels That Carry Trust and Power</h2>
+      <div class="srl c"></div>
+      <p class="sdc c" style="margin-top:16px">From commercial cargo carriers to advanced naval warships — we provide expert advisory across the full spectrum of vessel types.</p>
+    </div>
+
+    <!-- CONTAINER SHIP -->
+    <div class="vsl-card reveal">
+      <div class="vsl-body">
+        <div class="vsl-num">01</div>
+        <h3 class="vsl-name">Container Ship</h3>
+        <p class="vsl-desc">A container ship is designed to carry standardized cargo containers (TEUs and FEUs). These vessels are the backbone of global trade, enabling efficient, large-scale transport of manufactured goods, electronics, clothing, and other commodities. They are equipped with reinforced decks and cellular guides to stack containers securely, often reaching capacities of over 20,000 TEUs in ultra-large models.</p>
+        <div class="vsl-tags">
+          <span class="vsl-tag">High-Capacity</span>
+          <span class="vsl-tag">Fast &amp; Reliable</span>
+          <span class="vsl-tag">Fuel-Efficient</span>
+        </div>
+      </div>
+      <div class="vsl-img">
+        <img src="images/container.png" alt="Container Ship" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- DESTROYER -->
+    <div class="vsl-card reverse reveal">
+      <div class="vsl-body">
+        <div class="vsl-num">02</div>
+        <h3 class="vsl-name">Destroyer</h3>
+        <p class="vsl-desc">A fast, maneuverable warship equipped with advanced weaponry, radar, and missile systems. Destroyers are multi-role ships used for anti-air, anti-surface, and anti-submarine warfare. Modern destroyers often serve as the backbone of a navy's fleet defense, protecting larger vessels like aircraft carriers.</p>
+        <div class="vsl-tags">
+          <span class="vsl-tag">Multi-Role</span>
+          <span class="vsl-tag">High-Tech</span>
+          <span class="vsl-tag">Rapid Response</span>
+        </div>
+      </div>
+      <div class="vsl-img">
+        <img src="images/destroyer.png" alt="Destroyer Warship" loading="lazy"/>
+      </div>
+    </div>
+
+    <!-- FRIGATE -->
+    <div class="vsl-card reveal">
+      <div class="vsl-body">
+        <div class="vsl-num">03</div>
+        <h3 class="vsl-name">Frigate</h3>
+        <p class="vsl-desc">Frigates are versatile warships designed for a variety of missions, including anti-submarine warfare, air defense, and surface warfare. They are typically smaller than destroyers but are equipped with advanced sensors and weaponry, making them effective in fleet defense and escort roles.</p>
+        <div class="vsl-tags">
+          <span class="vsl-tag">Escort-Ready</span>
+          <span class="vsl-tag">Anti-Submarine</span>
+          <span class="vsl-tag">Cost-Effective</span>
+        </div>
+      </div>
+      <div class="vsl-img">
+        <img src="images/frigate.png" alt="Frigate Warship" loading="lazy"/>
+      </div>
+    </div>
+
   </div>
 </section>
 
