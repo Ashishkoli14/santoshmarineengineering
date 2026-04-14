@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Santosh Marine &amp; Engineering Consultants Pvt. Ltd. | Mumbai</title>
+  <meta name="description" content="Santosh Marine and Engineering Consultants Pvt. Ltd. – Full-spectrum maritime consulting firm in Mumbai. Shipbuilding advisory, ship repair, vessel S&P, regulatory compliance, project management, M&A, training and more."/>
+  <meta name="keywords" content="marine consultants Mumbai, maritime consultancy India, shipbuilding advisory, ship repair, vessel sale purchase, offshore engineering Mumbai, Santosh Marine, Worli Mumbai, DG Shipping, naval architecture"/>
+  <meta name="author" content="Santosh Marine and Engineering Consultants Pvt. Ltd."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://santoshmarineengineering.com/"/>
+  <meta property="og:title" content="Santosh Marine &amp; Engineering Consultants Pvt. Ltd."/>
+  <meta property="og:description" content="Full-spectrum maritime consultancy in Mumbai. Expert shipbuilding, repair, S&P advisory, regulatory compliance and project management."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://santoshmarineengineering.com/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-XXXXXXXXXX");</script>
+  <style>
+    :root{
+      --navy:#0B1F3A;--navy-mid:#102545;--navy-light:#1A3A5C;--navy-deep:#07162A;
+      --gold:#C8922A;--gold-light:#DFA94A;
+      --white:#FFFFFF;--off-white:#F5F2EC;
+      --gray-100:#F3F4F6;--gray-200:#E5E7EB;--gray-400:#9CA3AF;--gray-600:#6B7280;--gray-800:#374151;
+      --fd:"Cormorant Garamond",serif;--fb:"Outfit",sans-serif;
+      --r:4px;--rl:12px;--sh:0 4px 24px rgba(11,31,58,.10);--shl:0 16px 48px rgba(11,31,58,.18);
+      --t:all .35s cubic-bezier(.4,0,.2,1);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--fb);background:var(--white);color:#1A2C3E;line-height:1.65;overflow-x:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    ::-webkit-scrollbar{width:6px}
+    ::-webkit-scrollbar-track{background:var(--navy)}
+    ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+    /* NAVBAR */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:80px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;transition:var(--t)}
+    #nav.scrolled{background:rgba(7,22,42,.97);backdrop-filter:blur(16px);height:68px;box-shadow:0 2px 24px rgba(0,0,0,.4)}
+    .nbrand{display:flex;align-items:center;gap:11px}
+    .nlogo{width:52px;height:52px;flex-shrink:0;border-radius:50%;overflow:hidden;background:var(--white);padding:2px}
+    .nlogo img{width:100%;height:100%;object-fit:contain}
+    .nbtext{display:flex;flex-direction:column;line-height:1.1}
+    .nbname{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:var(--white)}
+    .nbsub{font-size:.58rem;letter-spacing:.14em;color:var(--gold-light);font-weight:500;text-transform:uppercase;margin-top:1px}
+    .nlinks{display:flex;align-items:center;gap:32px}
+    .nlinks a{font-size:.84rem;font-weight:500;color:rgba(255,255,255,.8);transition:var(--t);position:relative}
+    .nlinks a::after{content:"";position:absolute;bottom:-4px;left:0;right:0;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:var(--t)}
+    .nlinks a:hover{color:var(--gold-light)}
+    .nlinks a:hover::after{transform:scaleX(1);transform-origin:left}
+    .ncta{background:var(--gold)!important;color:var(--navy)!important;padding:9px 22px!important;border-radius:var(--r)!important;font-weight:700!important}
+    .ncta::after{display:none!important}
+    .ncta:hover{background:var(--gold-light)!important;transform:translateY(-1px)!important}
+    .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .hbg span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:var(--t)}
+    .mmenu{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(7,22,42,.98);backdrop-filter:blur(16px);padding:20px 5% 28px;border-top:1px solid rgba(200,146,42,.2);z-index:999}
+    .mmenu.open{display:flex;flex-direction:column;gap:0}
+    .mmenu a{color:rgba(255,255,255,.85);font-size:.95rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+
+    /* BUTTONS */
+    .btng{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-weight:700;padding:14px 32px;border-radius:var(--r);font-size:.88rem;letter-spacing:.06em;transition:var(--t);border:none;cursor:pointer;font-family:var(--fb)}
+    .btng:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,146,42,.32)}
+    .btno{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-weight:500;padding:14px 32px;border-radius:var(--r);font-size:.88rem;letter-spacing:.04em;border:1px solid rgba(255,255,255,.28);transition:var(--t);cursor:pointer;font-family:var(--fb)}
+    .btno:hover{border-color:var(--gold);color:var(--gold)}
+
+    /* SECTIONS */
+    section{padding:100px 5%}
+    .container{max-width:1200px;margin:0 auto}
+    .slb{font-family:var(--fb);font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+    .stt{font-family:var(--fd);font-size:clamp(2rem,3.8vw,3rem);font-weight:600;line-height:1.12;color:var(--navy);margin-top:8px}
+    .stt.lt{color:var(--white)}
+    .srl{width:44px;height:3px;background:var(--gold);margin:14px 0 0}
+    .srl.c{margin:14px auto 0}
+    .sdc{font-size:.97rem;color:var(--gray-600);line-height:1.85;margin-top:18px;max-width:560px}
+    .sdc.c{text-align:center;margin:18px auto 0}
+    .sdc.lt{color:rgba(255,255,255,.6)}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* HERO */
+    #hero{min-height:100vh;background:var(--navy);position:relative;display:flex;align-items:center;overflow:hidden}
+    .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(200,146,42,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(200,146,42,.05) 1px,transparent 1px);background-size:64px 64px;animation:gm 18s linear infinite}
+    @keyframes gm{0%{background-position:0 0}100%{background-position:64px 64px}}
+    .hrad{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 65% 45%,rgba(28,58,90,.5) 0%,transparent 65%)}
+    .hwav{position:absolute;bottom:0;left:0;right:0}
+    .hwav svg{display:block;width:100%}
+    .hcont{position:relative;z-index:2;padding:120px 5% 200px;max-width:1200px;margin:0 auto;width:100%}
+    .hbadge{display:inline-flex;align-items:center;gap:10px;background:rgba(200,146,42,.12);border:1px solid rgba(200,146,42,.28);border-radius:100px;padding:6px 18px;margin-bottom:28px;animation:fu .6s ease both}
+    .hdot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pp 2s ease infinite}
+    @keyframes pp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+    .hbadge span{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light)}
+    .hh1{font-family:var(--fd);font-size:clamp(3.2rem,7.5vw,7rem);font-weight:600;color:var(--white);line-height:.95;animation:fu .7s .1s ease both}
+    .hh1 em{font-style:italic;color:var(--gold)}
+    .hsub{font-family:var(--fd);font-size:clamp(1.6rem,3.5vw,3rem);font-weight:400;color:rgba(255,255,255,.6);margin-top:10px;animation:fu .7s .2s ease both}
+    .hdiv{width:56px;height:2px;background:var(--gold);margin:28px 0;animation:fu .7s .3s ease both}
+    .hdesc{font-size:1rem;font-weight:300;color:rgba(255,255,255,.6);max-width:520px;line-height:1.85;margin-bottom:40px;animation:fu .7s .35s ease both}
+    .hacts{display:flex;gap:14px;flex-wrap:wrap;animation:fu .7s .45s ease both}
+    .hstats{display:grid;grid-template-columns:repeat(4,1fr);position:absolute;bottom:0;left:0;right:0;background:rgba(7,22,42,.88);backdrop-filter:blur(12px);border-top:1px solid rgba(200,146,42,.18);animation:fu .8s .6s ease both}
+    .hs{padding:20px 28px;text-align:center;border-right:1px solid rgba(200,146,42,.1)}
+    .hs:last-child{border-right:none}
+    .hsn{font-family:var(--fd);font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
+    .hsl{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:4px}
+    @keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+    /* ABOUT */
+    #about{background:var(--off-white)}
+    .ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    .aiw{position:relative}
+    .aim{width:100%;aspect-ratio:4/3;border-radius:var(--rl);overflow:hidden;background:var(--navy)}
+    .aim img{width:100%;height:100%;object-fit:cover;transition:var(--t)}
+    .aim:hover img{transform:scale(1.04)}
+    .abg{position:absolute;bottom:-24px;right:-20px;background:var(--gold);color:var(--navy);padding:20px 24px;border-radius:var(--rl);text-align:center;box-shadow:var(--shl)}
+    .abg strong{display:block;font-family:var(--fd);font-size:2.2rem;font-weight:700;line-height:1}
+    .abg span{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .ac p{color:var(--gray-600);line-height:1.9;margin-bottom:14px;font-size:.96rem}
+    .avls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+    .avl{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--white);border-radius:var(--r);border-left:3px solid var(--gold);font-size:.84rem;font-weight:600;color:var(--navy)}
+    .avl::before{content:"✦";color:var(--gold);font-size:.6rem}
+
+    /* SERVICES */
+    #services{background:var(--navy)}
+    .svgr{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.1);border-radius:var(--rl);overflow:hidden}
+    .sc{background:rgba(255,255,255,.03);padding:32px 26px;transition:var(--t);position:relative;overflow:hidden;cursor:pointer}
+    .sc::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,146,42,.06) 0%,transparent 60%);opacity:0;transition:var(--t)}
+    .sc:hover{background:rgba(255,255,255,.07)}
+    .sc:hover::after{opacity:1}
+    .sctop{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:var(--t)}
+    .sc:hover .sctop{transform:scaleX(1)}
+    .scn{font-family:var(--fd);font-size:2.6rem;font-weight:700;color:rgba(200,146,42,.15);line-height:1;margin-bottom:14px}
+    .sci{width:46px;height:46px;border:1px solid rgba(200,146,42,.25);border-radius:10px;background:rgba(200,146,42,.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem}
+    .scnm{font-family:var(--fd);font-size:1.18rem;font-weight:600;color:var(--white);margin-bottom:10px;line-height:1.25}
+    .sctg{font-size:.8rem;color:rgba(255,255,255,.42);font-style:italic;margin-bottom:14px;line-height:1.6}
+    .scul li{font-size:.79rem;color:rgba(255,255,255,.5);line-height:1.55;display:flex;align-items:baseline;gap:8px;padding:3px 0}
+    .scul li::before{content:"▸";color:var(--gold);flex-shrink:0;font-size:.63rem}
+
+    /* WHY */
+    #why{background:var(--white)}
+    .wyg{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .wyl{display:flex;flex-direction:column}
+    .wyi{display:flex;gap:18px;padding:22px 18px;border-radius:var(--r);transition:var(--t);border-bottom:1px solid var(--gray-100)}
+    .wyi:last-child{border-bottom:none}
+    .wyi:hover{background:var(--gray-100)}
+    .wyix{font-family:var(--fd);font-size:2.8rem;font-weight:700;color:rgba(200,146,42,.18);line-height:1;min-width:48px;flex-shrink:0}
+    .wytx h4{font-family:var(--fd);font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+    .wytx p{font-size:.87rem;color:var(--gray-600);line-height:1.75}
+    .wyiw{position:relative}
+    .wyim{width:100%;aspect-ratio:3/4;border-radius:var(--rl);overflow:hidden;background:var(--navy-light)}
+    .wyim img{width:100%;height:100%;object-fit:cover;opacity:.9}
+    .wyfc{position:absolute;bottom:32px;left:-28px;background:var(--white);border-radius:var(--rl);padding:18px 22px;box-shadow:var(--shl);border-left:4px solid var(--gold);max-width:210px}
+    .wyfc strong{display:block;font-family:var(--fd);font-size:1.6rem;color:var(--navy)}
+    .wyfc span{font-size:.77rem;color:var(--gray-600);line-height:1.5}
+
+    /* PURPOSE */
+    #purpose{background:var(--navy-mid);padding:72px 5%}
+    .pug{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .puq{margin-top:28px;padding:20px 24px;background:rgba(200,146,42,.08);border:1px solid rgba(200,146,42,.2);border-radius:var(--rl)}
+    .puq p{font-family:var(--fd);font-size:1.1rem;color:var(--gold-light);line-height:1.7;font-style:italic}
+    .vgr{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .vc{background:rgba(255,255,255,.04);border:1px solid rgba(200,146,42,.15);border-radius:var(--rl);padding:22px 20px;transition:var(--t)}
+    .vc:hover{background:rgba(255,255,255,.08);border-color:rgba(200,146,42,.35);transform:translateY(-3px)}
+    .vci{font-size:1.4rem;margin-bottom:10px}
+    .vcn{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--white)}
+    .vcd{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.6}
+
+    /* CLIENTS */
+    #clients{background:var(--navy-deep);padding:56px 0;overflow:hidden}
+    .clhd{text-align:center;padding:0 5%;margin-bottom:32px}
+    .tkw{position:relative;overflow:hidden}
+    .tkw::before,.tkw::after{content:"";position:absolute;top:0;bottom:0;width:140px;z-index:2}
+    .tkw::before{left:0;background:linear-gradient(90deg,var(--navy-deep),transparent)}
+    .tkw::after{right:0;background:linear-gradient(-90deg,var(--navy-deep),transparent)}
+    .tktr{display:flex;gap:48px;align-items:center;width:max-content;animation:tk 35s linear infinite}
+    .tktr:hover{animation-play-state:paused}
+    @keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .cpil{padding:10px 22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);font-size:.84rem;font-weight:500;color:rgba(255,255,255,.4);white-space:nowrap;transition:var(--t)}
+    .cpil:hover{color:var(--gold-light);border-color:rgba(200,146,42,.3)}
+
+    /* EXPERTISE */
+    #expertise{background:var(--off-white)}
+    .tabrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+    .tbtn{padding:10px 22px;border-radius:100px;font-size:.83rem;font-weight:600;border:1px solid var(--gray-200);background:var(--white);color:var(--gray-600);cursor:pointer;transition:var(--t);font-family:var(--fb)}
+    .tbtn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+    .tbtn:hover:not(.active){border-color:var(--gold);color:var(--gold)}
+    .tcnt{display:none}
+    .tcnt.active{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .tlist li{display:flex;align-items:flex-start;gap:10px;font-size:.89rem;color:var(--gray-800);line-height:1.55;padding:11px 0;border-bottom:1px solid var(--gray-200)}
+    .tlist li:last-child{border-bottom:none}
+    .tlist li::before{content:"▸";color:var(--gold);flex-shrink:0;margin-top:1px}
+    .timg{width:100%;aspect-ratio:4/3;border-radius:var(--rl);overflow:hidden;background:var(--navy)}
+    .timg img{width:100%;height:100%;object-fit:cover;opacity:.88}
+
+    /* CONTACT */
+    #contact{background:var(--navy)}
+    .ctg{display:grid;grid-template-columns:1fr 1.15fr;gap:72px;align-items:start}
+    .ctt{font-family:var(--fd);font-size:1.45rem;color:var(--white);margin-bottom:28px}
+    .cdt{display:flex;gap:14px;margin-bottom:22px}
+    .cic{width:42px;height:42px;flex-shrink:0;background:rgba(200,146,42,.1);border:1px solid rgba(200,146,42,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--gold)}
+    .ctx strong{display:block;font-size:.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.14em;margin-bottom:4px}
+    .ctx span,.ctx a{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.65;transition:var(--t)}
+    .ctx a:hover{color:var(--gold-light)}
+    .csoc{margin-top:32px}
+    .csoc p{font-size:.7rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px}
+    .cslinks{display:flex;gap:10px}
+    .csl{width:36px;height:36px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:.85rem;font-weight:700;transition:var(--t)}
+    .csl:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+    .cfbx{background:rgba(255,255,255,.04);border:1px solid rgba(200,146,42,.15);border-radius:20px;padding:40px}
+    .cftt{font-family:var(--fd);font-size:1.45rem;color:var(--white);margin-bottom:24px}
+    .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .fg{margin-bottom:14px}
+    .fg label{display:block;font-size:.7rem;font-weight:700;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.14em;margin-bottom:7px}
+    .fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:11px 15px;font-family:var(--fb);font-size:.89rem;color:var(--white);outline:none;transition:var(--t)}
+    .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold);background:rgba(255,255,255,.08);box-shadow:0 0 0 3px rgba(200,146,42,.1)}
+    .fg select{color:rgba(255,255,255,.75)}
+    .fg select option{background:var(--navy-mid);color:var(--white)}
+    .fg textarea{resize:vertical;min-height:115px}
+    .fst{margin-top:12px;font-size:.86rem;padding:10px 14px;border-radius:var(--r);display:none}
+    .fst.ok{display:block;background:rgba(34,197,94,.1);color:#4ade80;border:1px solid rgba(34,197,94,.2)}
+    .fst.er{display:block;background:rgba(239,68,68,.1);color:#f87171;border:1px solid rgba(239,68,68,.2)}
+
+    /* FOOTER */
+    footer{background:var(--navy-deep);border-top:1px solid rgba(200,146,42,.12);padding:64px 5% 32px}
+    .fgr{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .fan{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--white);margin:14px 0 10px}
+    .fad{font-size:.83rem;color:rgba(255,255,255,.38);line-height:1.85}
+    .frg{margin-top:16px;display:flex;flex-direction:column;gap:4px}
+    .frg span{font-size:.72rem;color:rgba(255,255,255,.25)}
+    .fcol h5{font-size:.7rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.2em;margin-bottom:20px}
+    .fcol ul{display:flex;flex-direction:column;gap:10px}
+    .fcol ul li a{font-size:.83rem;color:rgba(255,255,255,.38);transition:var(--t)}
+    .fcol ul li a:hover{color:var(--gold-light);padding-left:4px}
+    .fbot{border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .fcp{font-size:.78rem;color:rgba(255,255,255,.28)}
+    .fls{display:flex;gap:24px}
+    .fls a{font-size:.78rem;color:rgba(255,255,255,.28);transition:var(--t)}
+    .fls a:hover{color:var(--gold)}
+    .flogo{width:56px;height:56px;border-radius:50%;overflow:hidden;background:var(--white);padding:3px;flex-shrink:0}
+    .flogo img{width:100%;height:100%;object-fit:contain}
+
+    @media(max-width:1024px){.svgr{grid-template-columns:repeat(2,1fr)}.fgr{grid-template-columns:1fr 1fr}}
+    @media(max-width:768px){
+      section{padding:72px 5%}
+      .nlinks{display:none}.hbg{display:flex}
+      .hh1{font-size:2.8rem}
+      .hstats{grid-template-columns:repeat(2,1fr);position:relative;margin-top:48px}
+      .hcont{padding-bottom:40px}
+      .ag,.wyg,.ctg,.pug{grid-template-columns:1fr}
+      .abg{position:static;margin-top:16px;display:inline-block}
+      .wyfc{left:12px}
+      .svgr{grid-template-columns:1fr}
+      .tcnt.active{grid-template-columns:1fr}
+      .fgr{grid-template-columns:1fr;gap:28px}
+      .fbot{flex-direction:column;text-align:center}
+      .frow{grid-template-columns:1fr}
+      .vgr{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:480px){.hacts{flex-direction:column}.btng,.btno{justify-content:center}}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <a href="#hero" class="nbrand">
+    <div class="nlogo"><img src="images/Santosh offshore color logo.jpeg" alt="Santosh Marine and Engineering Consultants Logo"/></div>
+    <div class="nbtext">
+      <span class="nbname">Santosh Marine</span>
+      <span class="nbsub">Engineering Consultants Pvt. Ltd.</span>
+    </div>
+  </a>
+  <ul class="nlinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#contact" class="ncta">Contact Us</a></li>
+  </ul>
+  <div class="hbg" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mmenu" id="mmenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#expertise" onclick="toggleMenu()">Expertise</a>
+  <a href="#contact" onclick="toggleMenu()">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hgrid"></div> <!-- #image to be added here -->
+  <div class="hrad"></div>
+  <div class="hwav">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:90px">
+      <path d="M0,45 C200,0 400,90 600,45 C800,0 1000,90 1200,45 C1320,18 1400,60 1440,45 L1440,90 L0,90 Z" fill="rgba(7,22,42,0.55)"/>
+      <path d="M0,70 C300,35 600,90 900,55 C1100,32 1300,75 1440,65 L1440,90 L0,90 Z" fill="rgba(7,22,42,0.85)"/>
+    </svg>
+  </div>
+  <div class="hcont">
+    <div class="hbadge"><div class="hdot"></div><span>Full-Spectrum Maritime Consultancy &middot; Mumbai, India</span></div>
+    <h1 class="hh1">Santosh<br><em>Marine</em></h1>
+    <p class="hsub">&amp; Engineering Consultants</p>
+    <div class="hdiv"></div>
+    <p class="hdesc">Delivering technically sound, commercially viable, and regulatory-compliant maritime advisory solutions to shipowners, shipyards, operators, investors, and port authorities across the globe.</p>
+    <div class="hacts">
+      <a href="#services" class="btng">Explore Services <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#contact" class="btno">Get In Touch</a>
+    </div>
+  </div>
+  <div class="hstats">
+    <div class="hs"><div class="hsn">50+</div><div class="hsl">Ships Built</div></div>
+    <div class="hs"><div class="hsn">8+</div><div class="hsl">Years of Expertise</div></div>
+    <div class="hs"><div class="hsn">12+</div><div class="hsl">Service Verticals</div></div>
+    <div class="hs"><div class="hsn">100%</div><div class="hsl">Independent Advisory</div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="ag">
+      <div class="aiw reveal">
+        <div class="aim"><img src="images/Maritime port operations.png" alt="Maritime port operations" loading="lazy"/></div>
+        <div class="abg"><strong>Mumbai</strong><span>Worli &middot; India</span></div>
+      </div>
+      <div class="ac reveal">
+        <span class="slb">About Us</span>
+        <h2 class="stt">Crafting India&rsquo;s Maritime Strength with Power, Precision &amp; Trust</h2>
+        <div class="srl"></div>
+        <p style="margin-top:20px">Santosh Marine and Engineering Consultants Private Limited is a full-spectrum maritime consulting firm headquartered in Mumbai, India. We support shipowners, shipyards, operators, investors, ports, and maritime service providers with expert advisory across every stage of the maritime value chain.</p>
+        <p>We combine deep industry expertise with practical execution capabilities to deliver technically sound, commercially viable, and regulatory-compliant solutions. Our independent, conflict-free approach ensures your interests are always at the forefront.</p>
+        <p>Focused on increasing shipyard efficiency, boosting shipbuilding output, and driving cost reduction through smart engineering and operational excellence &mdash; built to endure, built to lead.</p>
+        <div class="avls">
+          <div class="avl">Trust</div><div class="avl">Integrity</div>
+          <div class="avl">Collaboration</div><div class="avl">Sustainability</div>
+          <div class="avl">Service Excellence</div><div class="avl">Independence</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px" class="reveal">
+      <span class="slb">Our Services Portfolio</span>
+      <h2 class="stt lt">12 Integrated Service Verticals</h2>
+      <div class="srl c"></div>
+      <p class="sdc c lt">End-to-end maritime advisory across the full value chain &mdash; from newbuilding to decommissioning, acquisition to restructuring.</p>
+    </div>
+    <div class="svgr">
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">01</div><div class="sci">&#x1F6A2;</div><div class="scnm">Shipbuilding Advisory Services</div><div class="sctg">End-to-end advisory for newbuilding projects across commercial &amp; specialized vessel segments</div><ul class="scul"><li>Newbuilding feasibility studies &amp; technical due diligence</li><li>Shipyard selection &amp; contract negotiation support</li><li>Specification development &amp; design review</li><li>Construction supervision &amp; milestone inspections</li><li>Cost control, progress monitoring &amp; risk management</li><li>Delivery acceptance &amp; commissioning support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">02</div><div class="sci">&#x1F527;</div><div class="scnm">Ship Repair &amp; Conversion Consulting</div><div class="sctg">Planning, executing &amp; optimizing repair, retrofit and conversion projects</div><ul class="scul"><li>Repair scope definition &amp; budgeting</li><li>Dry dock planning &amp; shipyard negotiations</li><li>Retrofit &amp; conversion feasibility (green upgrades)</li><li>Supervision of repair &amp; conversion works</li><li>Quality assurance, timeline control &amp; claims support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">03</div><div class="sci">&#x1F4E6;</div><div class="scnm">Procurement &amp; Supply Chain Management</div><div class="sctg">Cost optimization, reliability and compliance across maritime procurement</div><ul class="scul"><li>Strategic sourcing &amp; vendor evaluation</li><li>Contract negotiation &amp; supplier management</li><li>Inventory optimization &amp; logistics coordination</li><li>Spare parts planning &amp; lifecycle cost analysis</li><li>Supply chain risk assessment &amp; mitigation</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">04</div><div class="sci">&#x2696;&#xFE0F;</div><div class="scnm">Regulatory Approvals &amp; Compliance</div><div class="sctg">Guiding maritime clients through complex regulatory frameworks across jurisdictions</div><ul class="scul"><li>Local &amp; international compliance advisory</li><li>Environmental &amp; emissions compliance</li><li>Certification planning &amp; audit readiness</li><li>Liaison with regulators, class societies &amp; authorities</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">05</div><div class="sci">&#x2693;</div><div class="scnm">Vessel Sale &amp; Purchase Advisory</div><div class="sctg">Independent advisory for vessel acquisitions and divestments</div><ul class="scul"><li>Market analysis &amp; asset valuation</li><li>Pre-purchase inspections &amp; technical due diligence</li><li>Commercial &amp; legal transaction support</li><li>Negotiation advisory &amp; closing assistance</li><li>Post-acquisition integration &amp; handover support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">06</div><div class="sci">&#x1F465;</div><div class="scnm">Manpower Sourcing</div><div class="sctg">Building compliant, competent and cost-effective maritime human capital</div><ul class="scul"><li>Seafarer &amp; shore-based manpower sourcing</li><li>Recruitment process design &amp; evaluation</li><li>Crew planning &amp; workforce optimization</li><li>HR policy advisory for maritime organizations</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">07</div><div class="sci">&#x1F393;</div><div class="scnm">Training &amp; Certification Services</div><div class="sctg">Enhancing workforce capability and compliance across maritime operations</div><ul class="scul"><li>Technical &amp; operational training programs</li><li>Leadership &amp; management development</li><li>Certification planning &amp; audit preparation</li><li>Customized modules aligned to regulatory requirements</li><li>Coordination with accredited training institutions</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">08</div><div class="sci">&#x1F91D;</div><div class="scnm">M&amp;A Advisory</div><div class="sctg">Maritime-focused M&amp;A supporting strategic growth, consolidation &amp; investment</div><ul class="scul"><li>Strategic assessment &amp; target identification</li><li>Technical, operational &amp; commercial due diligence</li><li>Valuation support &amp; deal structuring</li><li>Transaction advisory &amp; stakeholder coordination</li><li>Post-merger integration planning</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">09</div><div class="sci">&#x1F4C8;</div><div class="scnm">Restructuring &amp; Turnaround Advisory</div><div class="sctg">Assisting maritime businesses facing financial, operational or strategic challenges</div><ul class="scul"><li>Business diagnostics &amp; performance reviews</li><li>Cost restructuring &amp; operational optimization</li><li>Debt restructuring &amp; stakeholder negotiations</li><li>Fleet rationalization strategies</li><li>Turnaround execution support</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">10</div><div class="sci">&#x1F3D7;&#xFE0F;</div><div class="scnm">Infrastructure Management &amp; Advisory</div><div class="sctg">Advisory for shipyards, ports, terminals &amp; offshore facilities</div><ul class="scul"><li>Infrastructure feasibility &amp; master planning</li><li>Asset lifecycle management strategies</li><li>Operational efficiency &amp; capacity optimization</li><li>Maintenance planning &amp; CAPEX prioritization</li><li>Regulatory &amp; environmental compliance advisory</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">11</div><div class="sci">&#x1F4CB;</div><div class="scnm">Project Management Services</div><div class="sctg">Structured project management for complex maritime initiatives</div><ul class="scul"><li>End-to-end project planning &amp; execution</li><li>Schedule, cost &amp; risk management</li><li>Contractor coordination &amp; performance monitoring</li><li>Progress reporting &amp; governance support</li><li>Project close-out &amp; lessons-learned reviews</li></ul></div>
+      <div class="sc reveal"><div class="sctop"></div><div class="scn">12</div><div class="sci">&#x1F310;</div><div class="scnm">General Maritime Consulting</div><div class="sctg">Strategic, operational &amp; technical challenges across the maritime sector</div><ul class="scul"><li>Strategic planning &amp; market entry advisory</li><li>Operational efficiency &amp; cost optimization</li><li>Digital transformation &amp; process improvement</li><li>Sustainability &amp; ESG advisory</li><li>Independent expert opinions &amp; technical assessments</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="wyg">
+      <div class="reveal">
+        <span class="slb">Why Choose Us</span>
+        <h2 class="stt">The Santosh Marine Advantage</h2>
+        <div class="srl"></div>
+        <div style="height:28px"></div>
+        <div class="wyl">
+          <div class="wyi"><div class="wyix">01</div><div class="wytx"><h4>Deep Industry Expertise</h4><p>Decades of combined experience across the full maritime value chain &mdash; from shipbuilding and repair to offshore structures and port infrastructure.</p></div></div>
+          <div class="wyi"><div class="wyix">02</div><div class="wytx"><h4>Independent &amp; Conflict-Free</h4><p>As an independent advisory firm with no ties to shipyards or suppliers, our advice always prioritises your interests alone.</p></div></div>
+          <div class="wyi"><div class="wyix">03</div><div class="wytx"><h4>Practical, Execution-Focused</h4><p>We don&rsquo;t just advise &mdash; we deliver. Hands-on support from feasibility through to project completion.</p></div></div>
+          <div class="wyi"><div class="wyix">04</div><div class="wytx"><h4>Strong Industry Network</h4><p>Trusted relationships across Indian shipyards, DG Shipping, classification societies, port authorities, and international maritime stakeholders.</p></div></div>
+          <div class="wyi"><div class="wyix">05</div><div class="wytx"><h4>Multi-Jurisdictional Experience</h4><p>Proven track record in complex projects spanning Indian, UAE, Asian, and international maritime regulatory environments.</p></div></div>
+        </div>
+      </div>
+      <div class="wyiw reveal">
+        <div class="wyim"><img src="images/Ship operations at sea.png" alt="Ship operations at sea" loading="lazy"/></div>
+        <div class="wyfc"><strong>Worli</strong><span>Aurus Chambers<br>Mumbai &ndash; 400013</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PURPOSE & VALUES -->
+<section id="purpose">
+  <div class="container">
+    <div class="pug">
+      <div class="reveal">
+        <span class="slb">Our Purpose</span>
+        <h2 style="font-family:var(--fd);font-size:clamp(1.8rem,3vw,2.5rem);font-weight:600;color:var(--white);line-height:1.2;margin-top:8px">Innovation. Compliance. Sustainability.</h2>
+        <p style="font-size:.97rem;color:rgba(255,255,255,.6);line-height:1.9;margin-top:16px">To provide innovative, compliant, and sustainable maritime operations by delivering independent, technically rigorous, and commercially sound advisory solutions across the global maritime value chain.</p>
+        <div class="puq"><p>&ldquo;Navigate complexity, manage risk, and unlock value across your maritime operations.&rdquo;</p></div>
+      </div>
+      <div class="reveal">
+        <span class="slb">Our Values</span>
+        <div style="height:16px"></div>
+        <div class="vgr">
+          <div class="vc"><div class="vci">&#x1F91D;</div><div class="vcn">Trust</div><div class="vcd">Built through transparent, honest advisory in every engagement</div></div>
+          <div class="vc"><div class="vci">&#x2696;&#xFE0F;</div><div class="vcn">Integrity</div><div class="vcd">Uncompromising ethical standards in all professional relationships</div></div>
+          <div class="vc"><div class="vci">&#x1F331;</div><div class="vcn">Sustainability</div><div class="vcd">Committed to environmental responsibility and green maritime solutions</div></div>
+          <div class="vc"><div class="vci">&#x1F517;</div><div class="vcn">Collaboration</div><div class="vcd">Partnering deeply with clients and stakeholders for shared success</div></div>
+          <div class="vc" style="grid-column:span 2"><div class="vci">&#x1F3C6;</div><div class="vcn">Service Excellence</div><div class="vcd">Relentless focus on quality, precision, and exceeding client expectations in every project</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS TICKER -->
+<section id="clients">
+  <div class="clhd reveal">
+    <span class="slb">Trusted By</span>
+    <p style="color:rgba(255,255,255,.3);font-size:.84rem;margin-top:6px">Serving leading shipowners, shipyards, operators &amp; offshore companies</p>
+  </div>
+  <div class="tkw reveal">
+    <div class="tktr">
+      <div class="cpil">Mazagon Dock Shipbuilders Ltd.</div>
+      <div class="cpil">Garden Reach Shipbuilders &amp; Engineers</div>
+      <div class="cpil">Cochin Shipyard Ltd.</div>
+      <div class="cpil">Goa Shipyard Ltd.</div>
+      <div class="cpil">L&amp;T Shipbuilding</div>
+      <div class="cpil">Hindustan Shipyard Ltd.</div>
+      <div class="cpil">Swan Defence &amp; Heavy Industries</div>
+      <div class="cpil">Columbia Shipmanagement</div>
+      <div class="cpil">Deen Dayal Port Authority</div>
+      <div class="cpil">ONGC Offshore Division</div>
+      <div class="cpil">Shipping Corporation of India</div>
+      <div class="cpil">Indian Register of Shipping</div>
+      <div class="cpil">Mazagon Dock Shipbuilders Ltd.</div>
+      <div class="cpil">Garden Reach Shipbuilders &amp; Engineers</div>
+      <div class="cpil">Cochin Shipyard Ltd.</div>
+      <div class="cpil">Goa Shipyard Ltd.</div>
+      <div class="cpil">L&amp;T Shipbuilding</div>
+      <div class="cpil">Hindustan Shipyard Ltd.</div>
+      <div class="cpil">Swan Defence &amp; Heavy Industries</div>
+      <div class="cpil">Columbia Shipmanagement</div>
+      <div class="cpil">Deen Dayal Port Authority</div>
+      <div class="cpil">ONGC Offshore Division</div>
+      <div class="cpil">Shipping Corporation of India</div>
+      <div class="cpil">Indian Register of Shipping</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="container">
+    <div style="margin-bottom:36px" class="reveal">
+      <span class="slb">Sector Expertise</span>
+      <h2 class="stt">Specialized Knowledge Areas</h2>
+      <div class="srl"></div>
+    </div>
+    <div class="tabrow reveal">
+      <button class="tbtn active" onclick="switchTab(this,'t1')">Vessel Types</button>
+      <button class="tbtn" onclick="switchTab(this,'t2')">Offshore &amp; Energy</button>
+      <button class="tbtn" onclick="switchTab(this,'t3')">Ports &amp; Infrastructure</button>
+      <button class="tbtn" onclick="switchTab(this,'t4')">Regulatory Frameworks</button>
+    </div>
+    <div id="t1" class="tcnt active reveal"><ul class="tlist"><li>Bulk Carriers &amp; General Cargo Vessels</li><li>Crude, Product &amp; Chemical Tankers</li><li>LPG, LNG &amp; Gas Carriers</li><li>Container Ships &amp; Multi-Purpose Vessels</li><li>Offshore Support Vessels (PSV, AHTS, ERRV, CSV)</li><li>Dredgers, Hopper Barges &amp; Crane Vessels</li><li>Tugs, Pusher Craft &amp; Harbour Craft</li><li>Passenger Ferries, RoPax &amp; High-Speed Craft</li><li>Naval &amp; Coast Guard Vessels</li><li>FPSOs, FSOs, FLNGs &amp; Accommodation Vessels</li></ul><div class="timg"><img src="images/Commercial vessels.png" alt="Commercial vessels" loading="lazy"/></div></div>
+    <div id="t2" class="tcnt reveal"><ul class="tlist"><li>Fixed Platforms &amp; Jacket Structures</li><li>Jackup Rigs, Semi-Submersibles &amp; Drillships</li><li>Floating Production Systems (FPSO/FSO/FLNG)</li><li>Subsea Pipelines &amp; Umbilicals</li><li>Mooring System Analysis &amp; Design</li><li>Riser Analysis &amp; Fatigue Assessment</li><li>Offshore Wind Foundations &amp; Installation</li><li>Decommissioning &amp; Removal Engineering</li><li>Green Shipping &amp; Alternative Fuels</li></ul><div class="timg"><img src="images/Offshore platform.png" alt="Offshore platform" loading="lazy"/></div></div>
+    <div id="t3" class="tcnt reveal"><ul class="tlist"><li>Port Master Planning &amp; Feasibility Studies</li><li>Terminal Operations &amp; Capacity Analysis</li><li>Shipyard Layout &amp; Infrastructure Planning</li><li>Dry Dock &amp; Ship Lift Design Support</li><li>Port State Control &amp; Regulatory Compliance</li><li>CAPEX Prioritization &amp; Asset Management</li><li>Green Port &amp; Sustainability Initiatives</li></ul><div class="timg"><img src="images/Port infrastructure.png" alt="Port infrastructure" loading="lazy"/></div></div>
+    <div id="t4" class="tcnt reveal"><ul class="tlist"><li>IMO SOLAS, MARPOL, COLREGS &amp; ISM Code</li><li>Classification: LR, BV, DNV, ABS, IRS</li><li>DG Shipping (India) &ndash; Flag State Requirements</li><li>ISPS Code &amp; Maritime Security</li><li>Port State Control (Paris MOU, Tokyo MOU)</li><li>MLC 2006 Maritime Labour Compliance</li><li>Ballast Water Management Convention (BWM)</li><li>Carbon Intensity Indicator (CII) &amp; EEXI</li><li>Hong Kong Convention (Ship Recycling)</li></ul><div class="timg"><img src="images/Regulatory compliance.png" alt="Regulatory compliance" loading="lazy"/></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <span class="slb">Contact Us</span>
+      <h2 class="stt lt">Partner With Us</h2>
+      <div class="srl c"></div>
+      <p class="sdc c lt">Navigate complexity, manage risk, and unlock value across your maritime operations. Get in touch with our expert team today.</p>
+    </div>
+    <div class="ctg">
+      <div class="reveal">
+        <p class="ctt">Get In Touch</p>
+        <div class="cdt"><div class="cic">&#x1F4CD;</div><div class="ctx"><strong>Registered Office</strong><span>B-517, 5th Floor, Aurus Chambers,<br>Shivram Seth Amrutwar Road,<br>Worli, Mumbai &ndash; 400013<br>Maharashtra, India</span></div></div>
+        <div class="cdt"><div class="cic">&#x2709;&#xFE0F;</div><div class="ctx"><strong>Email</strong><span><a href="mailto:support@santoshmarineengineering.com">support@santoshmarineengineering.com</a><br><a href="mailto:support.santoshmarineengineering@gmail.com">support.santoshmarineengineering@gmail.com</a></span></div></div>
+        <div class="cdt"><div class="cic">&#x1F4DE;</div><div class="ctx"><strong>Phone / WhatsApp</strong><span><a href="tel:+919XXXXXXXX">+91 9XXXXXXXXX</a></span></div></div>
+        <div class="cdt"><div class="cic">&#x1F550;</div><div class="ctx"><strong>Business Hours</strong><span>Monday &ndash; Saturday<br>9:00 AM &ndash; 9:00 PM IST</span></div></div>
+        <div class="cdt"><div class="cic">&#x1F4CB;</div><div class="ctx"><strong>GST Number</strong><span>27ABRCS2275A1Z8</span></div></div>
+        <div class="csoc"><p>Connect With Us</p><div class="cslinks"><a href="#" class="csl">in</a><a href="#" class="csl">&#x1D54F;</a><a href="#" class="csl">f</a></div></div>
+      </div>
+      <div class="cfbx reveal">
+        <h3 class="cftt">Send Us a Message</h3>
+        <form id="cform" onsubmit="sendEmail(event)">
+          <div class="frow">
+            <div class="fg"><label>Full Name *</label><input type="text" name="from_name" placeholder="Your full name" required/></div>
+            <div class="fg"><label>Email Address *</label><input type="email" name="reply_to" placeholder="your@email.com" required/></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX"/></div>
+            <div class="fg"><label>Company / Organization</label><input type="text" name="company" placeholder="Your company name"/></div>
+          </div>
+          <div class="fg">
+            <label>Service Required</label>
+            <select name="service"><option value="">Select a service</option><option>Shipbuilding Advisory</option><option>Ship Repair &amp; Conversion</option><option>Procurement &amp; Supply Chain</option><option>Regulatory Approvals &amp; Compliance</option><option>Vessel Sale &amp; Purchase Advisory</option><option>Manpower Sourcing</option><option>Training &amp; Certification</option><option>M&amp;A Advisory</option><option>Restructuring &amp; Turnaround</option><option>Infrastructure Management</option><option>Project Management</option><option>General Maritime Consulting</option></select>
+          </div>
+          <div class="fg"><label>Subject *</label><input type="text" name="subject" placeholder="Brief description of your requirement" required/></div>
+          <div class="fg"><label>Message *</label><textarea name="message" placeholder="Describe your project, vessel details, timeline and any specific requirements..." required></textarea></div>
+          <button type="submit" class="btng" style="width:100%;justify-content:center;font-size:.9rem" id="sbtn">Send Message <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg></button>
+          <div id="fst" class="fst"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="fgr">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="flogo"><img src="images/images/Santosh offshore color logo.jpeg" alt="Santosh Marine Logo"/></div>
+        </div>
+        <div class="fan">Santosh Marine and Engineering<br>Consultants Private Limited</div>
+        <p class="fad">Full-spectrum maritime consultancy headquartered in Worli, Mumbai &mdash; delivering independent, technically rigorous, and commercially sound advisory solutions across the global maritime value chain.</p>
+        <div class="frg">
+          <span>GST: 27ABRCS2275A1Z8</span>
+          <span>Reg. Office: B-517, Aurus Chambers, Worli, Mumbai &ndash; 400013</span>
+          <span>support@santoshmarineengineering.com</span>
+        </div>
+      </div>
+      <div class="fcol"><h5>Services</h5><ul><li><a href="#services">Shipbuilding Advisory</a></li><li><a href="#services">Ship Repair &amp; Conversion</a></li><li><a href="#services">Procurement &amp; Supply Chain</a></li><li><a href="#services">Regulatory &amp; Compliance</a></li><li><a href="#services">Vessel S&amp;P Advisory</a></li><li><a href="#services">Manpower Sourcing</a></li><li><a href="#services">Training &amp; Certification</a></li></ul></div>
+      <div class="fcol"><h5>More Services</h5><ul><li><a href="#services">M&amp;A Advisory</a></li><li><a href="#services">Restructuring</a></li><li><a href="#services">Infrastructure Advisory</a></li><li><a href="#services">Project Management</a></li><li><a href="#services">General Consulting</a></li></ul><h5 style="margin-top:24px">Company</h5><ul><li><a href="#about">About Us</a></li><li><a href="#why">Why Choose Us</a></li><li><a href="#purpose">Our Values</a></li></ul></div>
+      <div class="fcol"><h5>Contact</h5><ul><li><a href="mailto:support@santoshmarineengineering.com">support@santoshmarineengineering.com</a></li><li><a href="tel:+919892554707">+91 98925 54707</a></li><li><a href="#">B-517, Aurus Chambers</a></li><li><a href="#">Worli, Mumbai 400013</a></li><li><a href="#">Mon&ndash;Sat: 9AM &ndash; 9PM</a></li></ul><h5 style="margin-top:24px">Expertise</h5><ul><li><a href="#expertise">Vessel Types</a></li><li><a href="#expertise">Offshore &amp; Energy</a></li><li><a href="#expertise">Ports &amp; Infrastructure</a></li><li><a href="#expertise">Regulatory</a></li></ul></div>
+    </div>
+    <div class="fbot">
+      <p class="fcp">&copy; 2025 Santosh Marine and Engineering Consultants Pvt. Ltd. All rights reserved.</p>
+      <div class="fls"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener("scroll",()=>{document.getElementById("nav").classList.toggle("scrolled",scrollY>50)});
+  function toggleMenu(){document.getElementById("mmenu").classList.toggle("open")}
+  function switchTab(btn,id){
+    document.querySelectorAll(".tbtn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".tcnt").forEach(c=>c.classList.remove("active"));
+    btn.classList.add("active");document.getElementById(id).classList.add("active");
+  }
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add("visible"),i*70);obs.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+
+  // EMAILJS SETUP:
+  // 1. Go to https://emailjs.com → Sign up with support@santoshmarineengineering.com
+  // 2. Email Services → Add Gmail → Connect → note SERVICE_ID
+  // 3. Email Templates → Create template → note TEMPLATE_ID
+  // 4. Account → API Keys → copy PUBLIC_KEY
+  // 5. Replace the 3 values below:
+  const EJPK="ky5WvzQNJ4niN7hbn";
+  const EJSID="service_xhr419k";
+  const EJTID="template_9iqs2ec";
+  emailjs.init(EJPK);
+
+  function sendEmail(e){
+    e.preventDefault();
+    const btn=document.getElementById("sbtn"),st=document.getElementById("fst"),frm=document.getElementById("cform");
+    btn.textContent="Sending...";btn.disabled=true;st.className="fst";
+    emailjs.send(EJSID,EJTID,{
+      from_name:frm.from_name.value,reply_to:frm.reply_to.value,
+      phone:frm.phone.value||"Not provided",company:frm.company.value||"Not provided",
+      service:frm.service.value||"Not specified",subject:frm.subject.value,message:frm.message.value,
+      to_email:"support@santoshmarineengineering.com"
+    }).then(()=>{
+      st.textContent="&#10003; Message sent! We will respond within 24 business hours.";st.className="fst ok";
+      frm.reset();btn.textContent="Send Message";btn.disabled=false;
+    }).catch(()=>{
+      st.textContent="&#10007; Could not send. Please email support@santoshmarineengineering.com directly.";st.className="fst er";
+      btn.textContent="Send Message";btn.disabled=false;
+    });
+  }
+</script>
+</body>
+</html>
