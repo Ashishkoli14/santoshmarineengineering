@@ -694,10 +694,10 @@
       service:frm.service.value||"Not specified",subject:frm.subject.value,message:frm.message.value,
       to_email:"support@santoshmarineengineering.com"
     }).then(()=>{
-      st.textContent="&#10003; Message sent! We will respond within 24 business hours.";st.className="fst ok";
+      st.textContent="✓ Message sent! We will respond within 24 business hours.";st.className="fst ok";
       frm.reset();btn.textContent="Send Message";btn.disabled=false;
     }).catch(()=>{
-      st.textContent="&#10007; Could not send. Please email support@santoshmarineengineering.com directly.";st.className="fst er";
+      st.textContent="✗ Could not send. Please email support@santoshmarineengineering.com directly.";st.className="fst er";
       btn.textContent="Send Message";btn.disabled=false;
     });
   }
