@@ -108,39 +108,6 @@ santoshmarineengineering/
 
 ---
 
-## 🔑 Key Credentials & Configuration
-
-### EmailJS Contact Form
-```
-Public Key: ky5WvzQNJ4niN7hbn
-Service ID: service_xhr419k
-Template ID: template_9iqs2ec
-Delivery Email: support@santoshmarineengineering.com
-```
-
-### Google Analytics
-```
-Measurement ID: G-9HJS4FFSF3
-Track Code: Installed in HTML head
-```
-
-### Domain & Hosting
-```
-Domain: santoshmarineengineering.com
-Registrar: Squarespace (via Google Workspace)
-Hosting: Netlify Free
-DNS: Cloudflare
-SSL: Let's Encrypt (Free)
-```
-
-### Cloudflare Nameservers
-```
-leia.ns.cloudflare.com
-yadiel.ns.cloudflare.com
-```
-
----
-
 ## 📊 Services Offered (11 Verticals)
 
 1. **Shipbuilding Advisory** — Strategic consulting for shipyards
@@ -301,5 +268,5 @@ Possible additions (not in current version):
 
 ---
 
-*Made with ❤️ by Ashish Manoj Koli*
+*Made by Ashish Manoj Koli*
 
